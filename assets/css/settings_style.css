@@ -1,0 +1,61 @@
+#settings-panel {
+	border-radius:4px;
+	overflow:visible;
+	margin-top:12%;
+}
+
+#sois-heading {
+	font-size: 28px;
+    font-weight: 300;
+	color:black;
+	margin: 8px 0px;
+	display:block;
+}
+
+#sois-heading span {
+	font-weight:400;
+}
+
+#profile-image-wrapper {
+	width:100%;
+}
+
+#profile-image-container {
+	margin:auto;
+	width:134px;
+	height:134px;
+	padding:3px;
+	border-radius:100%;
+}
+
+#profile-image {
+	height:128px;
+	width:128px;
+}
+
+.add-user-input, .select-dropdown  {
+	margin-bottom:6px !important;
+}
+
+#add-user-modal-footer {
+	padding: 20px 20px 20px 20px;
+    overflow: auto;
+}
+
+#add-user-modal-footer p {
+    margin: 0px;
+    font-size: 14px;
+    display: inline-block;
+    float: left;
+    padding: 6px;
+}
+
+.prefix {
+	top:8px;
+}
+
+@media screen and (max-width:600px) {
+	#settings-panel {
+		margin-top:8%;
+	}
+}

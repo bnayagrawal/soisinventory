@@ -1,0 +1,146 @@
+* {
+	/*-webkit-transition: all 0.25s ease-in-out;*/
+}
+   
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #888;
+    line-height: 30px;
+    text-align: center;
+	background-color:#f5f5f5;/*#363636;#252f30*/
+}
+
+#mitheading {
+	text-shadow: 3px 3px 4px rgba(0,0,0,0.37);
+	font-weight:100;
+}
+
+#formcontainer {
+	background-color:white;
+}
+
+#profileContainer {
+	height:135px;
+	width:135px;
+	border-radius:100%;
+	padding:3px;
+	margin:auto;
+	margin-top:-94px;
+	background-color:white;
+	overflow:hidden;
+}
+
+form{
+	padding:20px 20px 20px 16px;;
+}
+
+.topcontent {
+	padding-bottom:200px;
+	padding-top:0px;
+	/*background-image:url("/assets/img/mu.jpg");*/
+	background-size:cover;
+}
+
+.middlecontent {
+	margin-top:-125px !important;
+}
+
+.profile-image {
+	width:128px;
+	height:128px !important;
+	border-radius:100%;
+}
+
+/*
+#labelholder {
+	display:inline;
+	float:right;
+}
+*/
+
+.btn {
+	width:100%;
+}
+
+.prefix {
+	top:10px !important;
+}
+
+#userMessage {
+	font-size: 25px;
+	font-weight: 300;
+	text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.37);
+	margin: 0px;
+	color: white;
+	display:none;
+}
+
+  /* label color */
+   .input-field label {
+     color: #9e9e9e;
+   }
+   
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+		color: #1565C0 !important;
+   }
+   
+   .input-field input[type=password]:focus + label {
+     color: #1565C0 !important;
+   }
+   
+   /*label underline focus color*/
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #1565C0 !important;
+	 box-shadow:0 1px 0 0 #1565C0 !important;
+	 border-bottom-color: #1565C0 !important;
+   }
+   
+   .input-field input[type=password]:focus {
+     border-bottom: 1px solid #1565C0 !important;
+	 box-shadow:0 1px 0 0 #1565C0 !important;
+	 border-bottom-color: #1565C0 !important;
+   }
+   
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #1565C0 !important;
+   }
+      
+footer h6{
+	padding-bottom:6px;
+}
+/***** Media queries *****/
+
+@media (min-width: 600px) and (max-width: 650px) {
+	.container {
+		width: 95% !important;
+	}
+}
+
+@media screen and (min-width: 1120px) {
+		.container {
+		width: 55% !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	.container {
+		width:75% !important;
+	}
+
+	#mitheading {
+		font-size:42px;
+	}
+	
+	#fplink {
+		font-size: 14px;
+	}
+	
+	#userMessage {
+		font-size:20px;
+	}
+}
+
+
