@@ -37,7 +37,7 @@
 		<link rel="stylesheet" href="assets/css/form_theme_<?php echo $theme; ?>.css" id="form-element-theme">
 		
 	</head>
-	<body onresize="setModalResultHeight()">
+	<body>
 		<!-- FIXED FLOATING BUTTON -->
 		<div class="fixed-action-btn click-to-toggle">
 			<a class="btn-floating btn-large <?php echo $theme; ?> darken-3">
@@ -350,7 +350,6 @@
 				  });
 				$('.tooltipped').tooltip({delay: 50});
 				$(".search-modal-link").click(function(){
-					document.getElementById("search-modal-result-wrapper").style.height = (window.innerHeight - 60) + "px";
 					$("#search-modal-background").fadeToggle(function(){
 						$("#search-modal-wrapper").slideToggle();
 					})
@@ -600,9 +599,6 @@
 				  xhttp.send();
 			}
 			
-			function setModalResultHeight() {
-				document.getElementById("search-modal-result-wrapper").style.height = (window.innerHeight - 60) + "px";
-			}
 		</script>
 	</body>
 </html>
