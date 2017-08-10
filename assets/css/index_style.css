@@ -16,6 +16,7 @@ body {
 }
 
 #formcontainer {
+	max-width:380px;
 	background-color:white;
 }
 

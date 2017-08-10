@@ -6,6 +6,17 @@
 	background-color:#ccc;
  }
  
+ #pre-loader {
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	background-color:white;
+	display:flex;
+	z-index:999999999;
+ }
+ 
  #user_icon {
 	width: 38px!important;
     height: 38px!important;
@@ -308,6 +319,7 @@
     margin: 0px;
 	height:56px !important;
 	box-shadow:0px !important;
+	-webkit-box-shadow:0px !important;
   }
   
   .search-keyword {

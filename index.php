@@ -95,7 +95,7 @@ if(isset($_SESSION["error"]) == false)
 				  var xhttp;
 				  var returnedObject;				  
 				  if (user_name == "" || user_password == "") {
-					document.getElementById("profileImage").src = "/assets/ico/people_icon.png";
+					document.getElementById("profileImage").src = "assets/ico/people_icon.png";
 					return;
 				  }
 				  xhttp = new XMLHttpRequest();
@@ -103,7 +103,7 @@ if(isset($_SESSION["error"]) == false)
 					if (this.readyState == 4 && this.status == 200) {
 						var object = JSON.parse(this.responseText);
 						if(object.path == "" || object.username == "") {
-							document.getElementById("profileImage").src = "/assets/ico/people_icon.png";
+							document.getElementById("profileImage").src = "assets/ico/people_icon.png";
 						}
 						else {
 							$("#profileImage").animate({opacity: '0'},"slow",function(){

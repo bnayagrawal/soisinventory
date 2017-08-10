@@ -359,20 +359,14 @@
 	 cursor:pointer;
  }
  
- .user-dropdown-option-icon {
-	 position: relative;
-    top: 4px;
-    padding-right: 10px;
- }
- 
  /* USER LIST */
  .collection .collection-item.avatar {
     padding-left: 94px !important;
  }
  
  .collection .collection-item.avatar .circle {
-    width: 64px;
-    height: 64px;
+    width: 64px !important;
+    height: 64px !important;
     top: 10px;
     left: 14px;
  }

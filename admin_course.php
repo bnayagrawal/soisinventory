@@ -215,14 +215,14 @@
 													<td>{$row['course_name']}</td>
 													<td>{$std_count}</td>
 													<td>
-														<a href='#' onclick='setCourseInfo(\"{$row['course_name']}\",\"{$row['course_id']}\");' data-activates='dropdown-option-{$row['course_id']}' class='dropdown-button'>
+														<a href='#' onclick='setCourseInfo(\"{$row['course_name']}\",\"{$row['course_id']}\");' data-activates='dropdown-option-{$row['course_id']}' class='dropdown-button dropdown-user-option'>
 															<i class='material-icons course_option_menu_icon grey-text'>more_vert</i>
 														</a>
 													</td>
 													
-													<ul id='dropdown-option-{$row['course_id']}' class='dropdown-content dropdown-user-option'>
-														<li><a href='#!' class='<?php echo $theme; ?>-text text-darken-3 btn-edit-course'><i class='material-icons <?php echo $theme; ?>-text text-darken-3 user-dropdown-option-icon'>mode_edit</i>Edit</a></li>
-														<li><a href='#!' class='<?php echo $theme; ?>-text text-darken-3' onclick='confirmDialog()'><i class='material-icons <?php echo $theme; ?>-text text-darken-3 user-dropdown-option-icon'>delete_forever</i>Delete</a></li>
+													<ul id='dropdown-option-{$row['course_id']}' class='dropdown-content'>
+														<li><a href='#!' class='<?php echo $theme; ?>-text text-darken-3 btn-edit-course'><i class='material-icons <?php echo $theme; ?>-text text-darken-3'>mode_edit</i>Edit</a></li>
+														<li><a href='#!' class='<?php echo $theme; ?>-text text-darken-3' onclick='confirmDialog()'><i class='material-icons <?php echo $theme; ?>-text text-darken-3'>delete_forever</i>Delete</a></li>
 													</ul>
 								
 													<td>
@@ -339,7 +339,6 @@
 			var sd;
 			$("#url-theme").attr("content",$(".<?php echo $theme; ?>.darken-3").css("background-color"));
 			$("document").ready(function(){
-				$(".dropdown-button").dropdown();
 				$(".button-collapse").sideNav();
 				$('select').material_select();
 				$('input.autocomplete').autocomplete({
@@ -371,17 +370,19 @@
 				  complete: function() {} // Callback for Modal close
 				});
 				
-				$('.dropdown-button').dropdown({
-					inDuration: 300,
-					outDuration: 225,
-					constrain_width: false, // Does not change width of dropdown to that of the activator
-					hover: false, // Activate on hover
-					gutter: 0, // Spacing from edge
-					belowOrigin: false, // Displays dropdown below the button
-					alignment: 'right' // Displays dropdown with edge aligned to the left of button
-				});
+
 				
 				$('#custom-drop-button').dropdown({constrain_width:true});
+
+				$('.dropdown-user-option').dropdown({
+					inDuration: 300,
+      				outDuration: 225,
+      				constrainWidth: false, // Does not change width of dropdown to that of the activator
+      				hover: false, // Activate on hover
+      				gutter: 0, // Spacing from edge
+      				belowOrigin: false, // Displays dropdown below the button
+      				alignment: 'left', // Displays dropdown with edge aligned to the left of button
+				});
 				
 				$("#btn-add-course,#retry-add-course").click(function(){
 					$("#add-course-modal-heading").html("Add course <i class='material-icons btn-close-modal' title='close' onclick='closeCourseModal()'>close</i>");
@@ -453,12 +454,13 @@
 						$("#collection-item").empty();
 
 						//parse and list students
+						var img,span,p,li,li_id;
 						for(item in object.user_info) {
-							var img = "<img src='" + object.user_info[item].user_image + "' alt='user image' class='circle'>";
-							var span = "<span class='title black-text'>" + object.user_info[item].user_name + "</span>";
-							var p = "<p class='grey-text collection-description'>Email : " + object.user_info[item].user_email + "<br>Phone : " + object.user_info[item].user_phone +"</p>";
-							var li = "<li class='collection-item avatar' style='display:none;' id='collection-item-" + object.user_info[item].user_username + "'>";
-							var li_id = "#collection-item-" + object.user_info[item].user_username;
+							img = "<img src='" + object.user_info[item].user_image + "' alt='user image' class='circle'>";
+							span = "<span class='title black-text'>" + object.user_info[item].user_name + "</span>";
+							p = "<p class='grey-text collection-description'>Email : " + object.user_info[item].user_email + "<br>Phone : " + object.user_info[item].user_phone +"</p>";
+							li = "<li class='collection-item avatar' style='display:none;' id='collection-item-" + object.user_info[item].user_username + "'>";
+							li_id = "#collection-item-" + object.user_info[item].user_username;
 							$("#collection-item").append(li);
 							$(li_id).append(img);
 							$(li_id).append(span);
@@ -466,6 +468,16 @@
 							$(li_id).fadeToggle('slow');
 						}
 						
+						//If no. of students equals zero
+						if(Object.keys(object.user_info).length == 0) {
+							li = "<li class='collection-item avatar' style='display:none;padding-left:0px !important;' id='collection-item-null" + "'>";
+							li_id = "#collection-item-null";
+							var inf = "<h4 style='text-align:center;'> No students to show! </h4>";
+							$("#collection-item").append(li);
+							$(li_id).append(inf);
+							$(li_id).fadeToggle('slow');
+						}
+
 						//Set course title
 						$("#selected-course-title").html("Students of <span class='<?php echo $theme; ?>-text text-darken-3'>" + course_name + "</span>");
 					}

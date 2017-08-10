@@ -378,8 +378,8 @@
 }
 
 .collection .collection-item.avatar .circle {
-    width: 64px;
-    height: 64px;
+    width: 64px !important;
+    height: 64px !important;
     top: 22px;
     left: 14px;
 }
@@ -396,6 +396,14 @@
     font-weight: 300;
     font-size: 32px;
 	line-height:110%;
+}
+
+.collapsible-body {
+	padding: 0px !important;
+}
+
+.collapsible-header {
+	justify-content: space-between;
 }
 
 .delete-link {

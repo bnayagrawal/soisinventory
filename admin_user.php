@@ -108,6 +108,15 @@
 					<li><a href="admin_course.php">Course</a></li>
 					<li><a href="admin_vendor.php">Vendor</a></li>
 					<li class="active"><a href="#">User</a></li>
+					<li>
+						<!--test-->
+						<div class="input-field" style="height:inherit">
+          					<input id="search" type="search" placeholder="Search" required style="margin:0px;box-shadow:none;border:none;">
+          					<label class="label-icon" for="search" style="top:-12px;"><i class="material-icons">search</i></label>
+          					<i class="material-icons">close</i>
+						</div>
+						<!--end-test-->
+					</li>
 					<li class="hide-on-1200px"><a href="#" class="search-modal-link"><i class="material-icons left">search</i>Search</a></li>
 				</ul>
 				<div class="nav-row valign-wrapper hide-on-large-only">
@@ -183,24 +192,35 @@
 					<div class='col s12 m12 l6'>
 						<ul class="collapsible" data-collapsible="accordion">
 							<li>
-							  <div class="collapsible-header user-heading">
+							  <h4 class="user-heading">
 								<span class='badge-users'>
 									<span class='badge-text <?php echo $theme; ?>' id="total_user_count"><?php echo $total_students; ?> USERS</span>
 								</span>
 								Students
-							  </div>
+							  </h4>
 							  <div class="collapsible-body white"><span></span></div>
 							</li>
 							<?php						
 								$course = mysqli_query($mysqli, "SELECT * FROM course");
 								
 								while($row=mysqli_fetch_array($course,MYSQLI_ASSOC)) {
+									//batch count
+									$bc = 0;
+									$batch_count = mysqli_query($mysqli, "SELECT count(batch) AS bcount FROM student WHERE course_id={$row['course_id']}");
+									while($r = mysqli_fetch_array($batch_count,MYSQLI_ASSOC)) {
+										$bc = $r['bcount'];
+									}
+
+									if(!$bc > 0)
+										continue;
+
 									echo "<li>
-										<div class='collapsible-header' onclick='checkAndFillUserInfo({$row['course_id']},document.getElementById(\"select-option-for-{$row['course_id']}\").value)'><i class='material-icons grey-text text-darken-2'>account_circle</i>{$row['course_name']}
+										<div class='collapsible-header' onclick='checkAndFillUserInfo({$row['course_id']},document.getElementById(\"select-option-for-{$row['course_id']}\").value)'>
+											<div class='collapsible-title'><i class='material-icons grey-text text-darken-2'>account_circle</i>{$row['course_name']}</div>
 											<div class='batch-select-wrapper'>
 												<select id='select-option-for-{$row['course_id']}' onchange='fillUserInfo({$row['course_id']},this.value);'>";
-												
-									$batch = mysqli_query($mysqli, "SELECT DISTINCT batch FROM student WHERE course_id={$row['course_id']}");
+
+									$batch = mysqli_query($mysqli, "SELECT DISTINCT batch FROM student WHERE course_id={$row['course_id']}");			
 									while($rowb=mysqli_fetch_array($batch,MYSQLI_ASSOC)) {
 										echo "<option value='{$rowb['batch']}'>{$rowb['batch']}</option>";
 									}
@@ -618,7 +638,7 @@
 					hover: false,
 					gutter: 0,
 					belowOrigin: false,
-					alignment: 'right'
+					alignment: 'left'
 				});
 				
 				$('#custom-drop-button').dropdown({constrain_width:true});
@@ -849,7 +869,8 @@
 								hover: false,
 								gutter: 0,
 								belowOrigin: false,
-								alignment: 'right'
+								alignment: 'left',
+								stopPropagation: false
 							});
 						}
 					} 

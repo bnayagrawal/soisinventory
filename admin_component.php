@@ -38,7 +38,7 @@
 	</head>
 	<body>
 		<!-- PRE LOADER -->
-		<div id="pre-loader" style="width:100%;height:100%;position:fixed;top:0px;left:0px;background-color:white;display:flex;z-index:999999999;">
+		<div id="pre-loader">
 			<div id="pre-loader-container" style="margin:auto;">
 				<h6 style="text-align:center;font-weight:100;font-size:38px;"> Loading please wait... </h6>
 				<div class="progress">
@@ -201,7 +201,7 @@
 						$info = mysqli_query($mysqli, "select component_id, component_name, component_desc, vendor_name, component_image, component_year from component join vendor on component.vendor_id = vendor.vendor_id WHERE component.status='ok' ORDER BY component.component_id");
 						$component = array();
 						$filteredComponent = array();
-						$components_per_page = 6;
+						$components_per_page = 9;
 						$page_number = 1;
 
 						if(isset($_GET['page']))
@@ -254,15 +254,15 @@
 						$totalComponents = count($filteredComponent);
 						
 						if($components_per_page < 1 || $page_number < 1 ) {
-							$components_per_page = 6;
+							$components_per_page = 9;
 							$page_number = 1;
 						}
 						else if($page_number < 2 && ($components_per_page * $page_number) > $totalComponents) {
-							$components_per_page = 6;
+							$components_per_page = 9;
 							$page_number = 1;
 						} else if($page_number > 1) {
 							if((($components_per_page * $page_number) - $components_per_page ) > $totalComponents) {
-								$components_per_page = 6;
+								$components_per_page = 9;
 								$page_number = 1;
 							}
 						}
@@ -281,7 +281,7 @@
 							$theYear = $val->oneComponent[0]->get_year();
 							$theNumber = $val->compCount;
 
-							echo "					<div class='col s12 m6 l4' style='padding: 0.5rem 0.75rem;'>
+							echo "					<div class='col s12 m6 l4 xl3' style='padding: 0.5rem 0.75rem;'>
 						<div class='component-card z-depth-1 white'>
 							<div class='component-image-section'>
 								<div class='component-card-image-container'>
@@ -377,7 +377,7 @@
 				<!-- ADD NEW COMPONENT -->
 				<div id="add-com-modal-background">
 					<div id="add-com-modal-wrapper" class="white z-depth-3">
-						<form id="add-com-modal-content" action="database/addNewComponent.php" method="POST" enctype="multipart/form-data">
+						<form style="text-align:left;" id="add-com-modal-content" action="database/addNewComponent.php" method="POST" enctype="multipart/form-data">
 							<div id="add-com-modal-header">
 								<h4 class="<?php echo $theme; ?>-text text-darken-3"> Add Component <i class="material-icons" id="btn-close-modal" title="close" onclick="addComponentHide();">close</i></h4>
 							</div>

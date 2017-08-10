@@ -365,7 +365,7 @@
 					hover: false, // Activate on hover
 					gutter: 0, // Spacing from edge
 					belowOrigin: false, // Displays dropdown below the button
-					alignment: 'right' // Displays dropdown with edge aligned to the left of button
+					alignment: 'left' // Displays dropdown with edge aligned to the left of button
 				});
 				
 				$('#custom-drop-button').dropdown({constrain_width:true});
