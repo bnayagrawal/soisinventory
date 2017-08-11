@@ -1,4 +1,2 @@
 # soisinventory
-# Akheel
-#hhh
 
