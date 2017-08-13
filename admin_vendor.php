@@ -354,6 +354,7 @@
 		</footer>
 		
 		<!-- SCRIPTS -->
+		<script src="https://use.fontawesome.com/9bb8709353.js"></script>
 		<script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
 		<script>
