@@ -556,7 +556,7 @@
           <div class="footer-copyright" style="background-color:rgba(0,0,0,0.1);">
             <div class="container">
             © <?php echo date("Y"); ?> School Of Information Sciences | Manipal University
-            <a class="grey-text text-lighten-4 right" href="#!">@bnayagrawal</a>
+            <a class="grey-text text-lighten-4 right" href="https://github.com/bnayagrawal"><i class="fa fa-github" aria-hidden="true" style="margin-right: 6px;"></i>bnayagrawal</a>
             </div>
           </div>
 		</footer>

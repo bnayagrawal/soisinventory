@@ -10,12 +10,12 @@ if(isset($_SESSION["error"]) == false)
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="#00acc1" id="url-theme">
+		<meta name="theme-color" content="#283593" id="url-theme">
         <title>SOIS Inventory Login Form</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/index_style.css">
-		<link rel="stylesheet" href="assets/css/form_theme_cyan.css" id="form-element-theme">
+		<link rel="stylesheet" href="assets/css/form_theme_indigo.css" id="form-element-theme">
 		
 		<!--Import Google Icon Font-->
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -36,7 +36,7 @@ if(isset($_SESSION["error"]) == false)
     <body>
         <!-- Top content -->
         <div class="content">
-            <div class="row valign-wrapper theme-cyan cyan darken-1 topcontent">
+            <div class="row valign-wrapper indigo darken-3 topcontent">
                 <div class="container">
                     <h1 class="white-text center-align" id="mitheading">SOIS <span style="font-weight:300;">inventory</span></h1>
 					<p class="white-text center-align message" id="userMessage"></p>

@@ -17,6 +17,12 @@
      z-index: 999999999;
  }
  
+ #pre-loader-container h6 {
+     text-align: center;
+     font-weight: 100;
+     font-size: 38px;
+ }
+ 
  #user_icon {
      width: 38px!important;
      height: 38px!important;
@@ -461,6 +467,11 @@
  @media screen and (max-width:400px) {
      nav .brand-logo {
          font-size: 1.9rem !important;
+     }
+     #pre-loader-container h6 {
+         font-weight: 300;
+         padding: 6px;
+         font-size: 18px;
      }
  }
  /* ADD COMPONENT MODAL */
