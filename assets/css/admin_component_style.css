@@ -457,6 +457,12 @@
          top: 0%;
      }
  }
+ 
+ @media screen and (max-width:400px) {
+     nav .brand-logo {
+         font-size: 1.9rem !important;
+     }
+ }
  /* ADD COMPONENT MODAL */
  
  #add-com-modal-background {
