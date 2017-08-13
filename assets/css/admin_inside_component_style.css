@@ -299,7 +299,7 @@
        color: gray !important;
    }
    
-   ::-moz-placeholder {
+    ::-moz-placeholder {
        color: gray !important;
    }
    /* RULES FOR RESPONSIVENESS */
@@ -483,4 +483,12 @@
    
    .collapsible {
        margin: 0px;
+   }
+   /* FOOTER FIX */
+   
+   .page-footer {
+       position: absolute;
+       right: 0;
+       bottom: 0;
+       left: 0;
    }
