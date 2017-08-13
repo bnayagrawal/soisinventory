@@ -117,7 +117,7 @@
 			<li>
 				<div class="userView">
 					<div class="background">
-						<img class="responsive-img" src="assets/img/final-background.png">
+						<img class="responsive-img" src="assets/img/mu3.jpg" style="filter: blur(4px);">
 					</div>
 					<a href="#!user"><img class="circle" src="<?php require_once('database/config.php'); 
 							$info = mysqli_query($mysqli, "select admin_image from admin");
@@ -285,7 +285,7 @@
 						<div class='component-card hoverable z-depth-1 white'>
 							<div class='component-image-section'>
 								<div class='component-card-image-container'>
-									<img src='{$theImage}' class='component-card-image' alt='{$theName}'>
+									<img src='{$theImage}' class='component-card-image materialboxed' alt='{$theName}'>
 								</div>
 							</div>
 							<div class='component-info-section'>

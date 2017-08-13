@@ -109,7 +109,7 @@
 			<li>
 				<div class="userView">
 					<div class="background">
-						<img class="responsive-img" src="assets/img/final-background.png">
+						<img class="responsive-img" src="assets/img/mu3.jpg" style="filter: blur(4px);">
 					</div>
 					<a href="#!user"><img class="circle" src="<?php require_once('database/config.php'); 
 							$info = mysqli_query($mysqli, "select admin_image from admin");
