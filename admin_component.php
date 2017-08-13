@@ -27,7 +27,7 @@
 		<title>MIT Inventory</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="#1565C0" id="url-theme">
+		<meta name="theme-color" content="white" id="url-theme">
 	  
 		<!--Import Google Icon Font-->
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -40,9 +40,9 @@
 		<!-- PRE LOADER -->
 		<div id="pre-loader">
 			<div id="pre-loader-container" style="margin:auto;">
-				<h6 style="text-align:center;font-weight:100;font-size:38px;"> Loading please wait... </h6>
-				<div class="progress">
-					<div class="indeterminate"></div>
+				<h6> Loading please wait... </h6>
+				<div class="progress <?php echo $theme; ?> lighten-3">
+					<div class="indeterminate <?php echo $theme; ?> darken-3"></div>
 				</div>
 			</div>
 		</div>
