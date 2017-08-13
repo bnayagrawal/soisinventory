@@ -282,7 +282,7 @@
 							$theNumber = $val->compCount;
 
 							echo "					<div class='col s12 m6 l4 xl3' style='padding: 0.5rem 0.75rem;'>
-						<div class='component-card z-depth-1 white'>
+						<div class='component-card hoverable z-depth-1 white'>
 							<div class='component-image-section'>
 								<div class='component-card-image-container'>
 									<img src='{$theImage}' class='component-card-image' alt='{$theName}'>
