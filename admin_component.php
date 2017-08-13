@@ -292,7 +292,7 @@
 								<div class='component-heading'>
 									<h3 class='truncate {$theme}-text text-darken-3'> {$theName} </h3> 
 								</div>
-								<div class='component-description'>
+								<div class='component-description custom_scroll_bar'>
 									<p> {$theDesc} </p>
 								</div>
 							</div>
