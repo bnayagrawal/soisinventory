@@ -85,7 +85,7 @@
 				</ul>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li><a href="admin_component.php">Component</a></li>
-					<li><a href="admin_reservation.php">Rreservation</a></li>
+					<li><a href="admin_reservation.php">Reservation</a></li>
 					<li><a href="admin_course.php">Course</a></li>
 					<li class="active"><a href="#">Vendor</a></li>
 					<li><a href="admin_user.php">User</a></li>
