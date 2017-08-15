@@ -78,7 +78,7 @@ $(document).on('click', function (e) {
         <div class="row">
 			<div class="col-md-6">
 				<img id="page-picture-id" src="mit_logo.png"  height="auto" width="80">
-				<h2 id="page-name-id">MIT inventory</h2>
+				<h2 id="page-name-id">SOIS Inventory</h2>
 			</div>
 			
 			<div class="col-md-6">

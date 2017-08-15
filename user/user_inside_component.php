@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>MIT Inventory</title>
+		<title>SOIS Inventory</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="<?php echo $theme; ?>" id="url-theme">

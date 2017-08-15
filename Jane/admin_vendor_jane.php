@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>MIT Inventory</title>
+  <title>SOIS Inventory</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
         <div class="row">
 			<div class="col-md-6">
 				<img id="page-picture-id" src="mit_logo.png"  height="auto" width="80">
-				<h2 id="page-name-id">MIT inventory</h2>
+				<h2 id="page-name-id">SOIS Inventory</h2>
 			</div>
 			
 			<div class="col-md-6">
@@ -133,7 +133,7 @@ mysqli_close($mysqli);
 ?>
 
 <footer class="container-fluid text-center">
-  <p>MIT Inventory Copyright</p>
+  <p>SOIS Inventory Copyright</p>
 </footer>
 
 </body>

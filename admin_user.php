@@ -42,7 +42,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>MIT Inventory</title>
+		<title>SOIS Inventory</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="#1565C0" id="url-theme">
@@ -108,7 +108,7 @@
 					<li><a href="admin_course.php">Course</a></li>
 					<li><a href="admin_vendor.php">Vendor</a></li>
 					<li class="active"><a href="#">User</a></li>
-					<li>
+					<li style="display:none;">
 						<!--test-->
 						<div class="input-field" style="height:inherit">
           					<input id="search" type="search" placeholder="Search" required style="margin:0px;box-shadow:none;border:none;">
