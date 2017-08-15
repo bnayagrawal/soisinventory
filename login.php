@@ -22,6 +22,7 @@ if(isset($_POST['login']))
 						
 						$_SESSION["error"] = 1;
 						$_SESSION["LoggedIn"] = true;
+						$_SESSION["userType"] = "admin";
 						$_SESSION['userName'] = $userName;
 						$_SESSION['userPassword'] = $pass;
 						$_SESSION['theme'] = $theme;

@@ -365,9 +365,7 @@
 				$('select').material_select();
 				$('.tooltipped').tooltip({delay: 50});
 				$(".search-modal-link").click(function(){
-					$("#search-modal-background").fadeToggle(function(){
-						$("#search-modal-wrapper").slideToggle();
-					})
+					toggleSearchModal();
 				});
 								
 				//modal options
@@ -420,8 +418,7 @@
 			}
 			
 			function toggleSearchModal() {
-				document.getElementById("search-modal-result-wrapper").style.height = (window.innerHeight - 60) + "px";
-				$("#search-modal-wrapper").slideToggle(function(){
+				$("#search-modal-wrapper").fadeToggle(function(){
 					$("#search-modal-background").fadeToggle();
 				});
 			}

@@ -582,9 +582,7 @@
 				  });
 				$('.tooltipped').tooltip({delay: 50});
 				$(".search-modal-link").click(function(){
-					$("#search-modal-background").fadeToggle(function(){
-						$("#search-modal-wrapper").slideToggle();
-					});
+					toggleSearchModal();
 				});
 				
 				//modal options
@@ -681,7 +679,7 @@
 			
 			
 			function toggleSearchModal() {
-				$("#search-modal-wrapper").slideToggle(function(){
+				$("#search-modal-wrapper").fadeToggle(function(){
 					$("#search-modal-background").fadeToggle();
 				});
 			}

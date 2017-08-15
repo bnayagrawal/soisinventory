@@ -54,19 +54,25 @@
 				<a href="#" class="brand-logo">SOIS <span style="font-weight:400;">inventory</span></a>
 				<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a class="dropdown-button" href="#!" data-activates="dropdown1"><img src="<?php require_once('database/config.php'); 
-							$info = mysqli_query($mysqli, "select admin_image from admin");
-		
-							while($row=mysqli_fetch_array($info,MYSQLI_ASSOC)) {
-								$image_path = $row['admin_image'];
-							}
-											
-							if(isset($image_path))
-								echo $image_path;
-							else
-								echo "uploads/userimage/user.png";
-							?>
-					id="user_icon" class="circle responsive-img"><?php echo $current_user; ?><i class="material-icons right">arrow_drop_down</i></a></li>
+					<li>
+						<a class="dropdown-button" href="#!" data-activates="dropdown1">
+							<img src="<?php require_once('database/config.php'); 
+								$info = mysqli_query($mysqli, "select admin_image from admin");
+			
+								while($row=mysqli_fetch_array($info,MYSQLI_ASSOC)) {
+									$image_path = $row['admin_image'];
+								}
+												
+								if(isset($image_path))
+									echo $image_path;
+								else
+									echo "uploads/userimage/user.png";
+								?>
+								" id="user_icon" class="circle responsive-img"/>
+								<?php echo $current_user; ?>
+							<i class="material-icons right">arrow_drop_down</i>
+						</a>
+					</li>
 				</ul>
 				<ul id="nav-pc" class="right hide-on-med-and-down">
 					<li><a class="dropdown-button" href="#!" data-activates="dropdown2"><i class="material-icons right">view_list</i></a></li>
@@ -308,9 +314,7 @@
 
 				$('.tooltipped').tooltip({delay: 50});
 				$(".search-modal-link").click(function(){
-					$("#search-modal-background").fadeToggle(function(){
-						$("#search-modal-wrapper").slideToggle();
-					})
+					toggleSearchModal();
 				});
 								
 				//modal options
@@ -329,7 +333,7 @@
 			});
 
 			function toggleSearchModal() {
-				$("#search-modal-wrapper").slideToggle(function(){
+				$("#search-modal-wrapper").fadeToggle(function(){
 					$("#search-modal-background").fadeToggle();
 				});
 			}
