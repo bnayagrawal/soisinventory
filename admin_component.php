@@ -7,7 +7,7 @@
 		if($current_user != "admin") {
 			echo "<script>
 					alert('You are not allowed to access this page! Please login again.');
-					window.location.href='../logout.php';
+					window.location.href='logout.php';
 				  </script>
 			";
 		}
