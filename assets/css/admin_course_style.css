@@ -263,6 +263,10 @@
      color: black;
  }
  
+ .search-result-component-name:hover {
+     text-decoration: underline;
+ }
+ 
  .search-result-component-id {
      margin: 0px;
      padding: 2px 0px;
