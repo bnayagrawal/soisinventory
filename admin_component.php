@@ -17,6 +17,8 @@
 		echo "<script>
 				alert('You need to login to access this page.');
 				window.location.href='logout.php';
+
+				
 			  </script>
 		";
 	 }
@@ -334,10 +336,13 @@
 					
 					echo "<li class='active {$theme} darken-3'><a href='#'>{$page_number}</a></li>";
 					
-					for($i = $page_number+1; $i <= ceil(($totalComponents/$shownComponents)); $i++) 
-						echo "<li><a href='admin_component.php?page={$i}&cpp={$components_per_page}'>{$i}</a></li>";
+					if(!($shownComponents < $components_per_page))
+						for($i = $page_number+1; $i <= ceil(($totalComponents/$shownComponents)); $i++) 
+							echo "<li><a href='admin_component.php?page={$i}&cpp={$components_per_page}'>{$i}</a></li>";
 						
-					if($page_number != ceil(($totalComponents/$shownComponents))){
+					if($shownComponents < $components_per_page)
+						echo "<li class='disabled'><a href='#!'><i class='material-icons'>chevron_right</i></a></li></ul></div>";
+					else if($page_number != ceil(($totalComponents/$shownComponents))) {
 						$next_page = $page_number+1;
 						echo "<li><a href='admin_component.php?page={$next_page}&cpp={$components_per_page}'><i class='material-icons'>chevron_right</i></a></li>";
 					}
